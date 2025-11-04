@@ -8,6 +8,7 @@ int main (){
     /* Odevlerini yukleyen ogrenciler bu dosyada guzel formatli sekilde adini, soyadini yazdiracak.
         Satirlarinizi eklerken baskasinin kodunu bozmamaniz gerekmektedir.
     */
+   printf("ibrahim sengun");
 
     return 0;
 }
