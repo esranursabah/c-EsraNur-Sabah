@@ -9,8 +9,10 @@ int main (){
         Satirlarinizi eklerken baskasinin kodunu bozmamaniz gerekmektedir.
     */
    printf("ibrahim sengun");
+   printf("Efsun Ruzgar Bayik");
 
    printf("Umay ERYİLMAZ");
 
+   printf("Sefa Sahin OZ");
     return 0;
 }
