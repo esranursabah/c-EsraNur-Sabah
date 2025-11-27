@@ -1,0 +1,167 @@
+#include <stdio.h>
+
+// Fonksiyon bildirimleri
+void cozum61();
+void cozum616();
+void cozum622();
+void cozum627();
+void cozum64();
+
+int main() {
+
+    int secim;
+
+    printf("=============================================\n");
+    printf("              \n");
+    printf("     Hazırlayan: İbrahim Halil Çetiner        \n");
+    printf("=============================================\n\n");
+
+    printf("Hangi ödevi çalıştırmak istiyorsunuz?\n\n");
+    printf("   1 - COZUM 6.1  : Koninin hacmi\n");
+    printf("   2 - COZUM 6.16 : Harmonik ortalama\n");
+    printf("   3 - COZUM 6.22 : Su tüketim faturası\n");
+    printf("   4 - COZUM 6.27 : İki noktanın orta noktası\n");
+    printf("   5 - COZUM 6.4  : ASCII sanat\n\n");
+
+    printf("Seçiminiz: ");
+    scanf("%d", &secim);
+
+    switch (secim) {
+        case 1: cozum61();  break;
+        case 2: cozum616(); break;
+        case 3: cozum622(); break;
+        case 4: cozum627(); break;
+        case 5: cozum64();  break;
+        default:
+            printf("Geçersiz seçim yaptınız.\n");
+    }
+
+    return 0;
+}
+
+
+
+/* ============================================================
+   COZUM 6.1 — Koninin Hacmi
+   ============================================================ */
+void cozum61() {
+
+    float h, d, r, alan, hacim;
+    const float PI = 3.1419;
+
+    printf("\n--- COZUM 6.1 : Koninin Hacmi ---\n");
+
+    printf("Yüksekliği giriniz (cm): ");
+    scanf("%f", &h);
+
+    printf("Çapı giriniz (cm): ");
+    scanf("%f", &d);
+
+    r = d / 2.0;
+    alan = PI * r * r;
+    hacim = (alan * h) / 3.0;
+
+    printf("\nGirdi: yükseklik = %.0f cm, çap = %.0f cm\n", h, d);
+    printf("Koninin hacmi: %.2f cm^3\n", hacim);
+}
+
+
+
+/* ============================================================
+   COZUM 6.16 — Harmonik Ortalama
+   ============================================================ */
+void cozum616() {
+
+    int x, y;
+
+    printf("\n--- COZUM 6.16 : Harmonik Ortalama ---\n");
+
+    printf("Harmonik ortalama için iki sayı giriniz: ");
+    scanf("%d %d", &x, &y);
+
+    int pay = 2 * x * y;
+    int payda = x + y;
+
+    double sonuc = (double)pay / payda;
+
+    printf("\n  2 * %d * %d = %d\n", x, y, pay);
+    printf("Harmonik Ortalama = %d / %d = %.2f\n", pay, payda, sonuc);
+}
+
+
+
+/* ============================================================
+   COZUM 6.22 — Su Tüketim Faturası Hesaplama
+   ============================================================ */
+void cozum622() {
+
+    int ilk, son;
+    const double FIYAT_M3 = 0.912857;
+
+    printf("\n--- COZUM 6.22 : Su Tüketimi ---\n");
+
+    printf("İlk gösterge: ");
+    scanf("%d", &ilk);
+
+    printf("Son gösterge: ");
+    scanf("%d", &son);
+
+    int tuketim = son - ilk;
+
+    if (tuketim < 0) {
+        printf("Hata: son gösterge ilk göstergeden küçük olamaz!\n");
+        return;
+    }
+
+    double tutar = tuketim * FIYAT_M3;
+    double atiksu = tutar * 0.50;
+    double toplam = tutar + atiksu;
+
+    printf("\nTüketim       : %d m3\n", tuketim);
+    printf("Tüketim Tutarı: %.2f TL\n", tutar);
+    printf("Atık Su (%50) : %.2f TL\n", atiksu);
+    printf("TOPLAM        : %.2f TL\n", toplam);
+}
+
+
+
+/* ============================================================
+   COZUM 6.27 — İki Noktanın Orta Noktası
+   ============================================================ */
+void cozum627() {
+
+    double x1, y1, x2, y2, x0, y0;
+
+    printf("\n--- COZUM 6.27 : Orta Nokta ---\n");
+
+    printf("İlk nokta (x1 y1): ");
+    scanf("%lf %lf", &x1, &y1);
+
+    printf("İkinci nokta (x2 y2): ");
+    scanf("%lf %lf", &x2, &y2);
+
+    x0 = (x1 + x2) / 2.0;
+    y0 = (y1 + y2) / 2.0;
+
+    printf("\nOrta Nokta: (%.2f , %.2f)\n", x0, y0);
+}
+
+
+
+/* ============================================================
+   COZUM 6.4 — ASCII Sanatı
+   ============================================================ */
+void cozum64() {
+
+    printf("\n--- COZUM 6.4 : ASCII Sanat ---\n\n");
+
+    printf("        .-\"-\".\n");
+    printf("       /_ _  \\\n");
+    printf("       \\@ @  /\n");
+    printf("       (_= _)\n");
+    printf("        /)  (\n");
+    printf("       /((_`)_ ,\n");
+    printf("       \\__(/-\"\"\n");
+    printf("        __|||__\n");
+    printf("       ((__|__))\n");
+}

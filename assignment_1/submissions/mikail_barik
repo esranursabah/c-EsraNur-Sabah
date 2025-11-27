@@ -1,0 +1,114 @@
+#include <stdio.h>
+
+int main() {
+
+
+    // ==== 6.1 Koninin Hacmi ====
+    printf("\n\n\nCOZUM 6.1:\n");
+    printf("----------\n");
+
+    float yuk, capDeger, yaricap, tabanA, hacim;
+    const float PI = 3.1419;
+
+    printf("Koninin yüksekliğini cm cinsinden belirtin: ");
+    scanf("%f", &yuk);
+
+    printf("Koninin çap değerini girin: ");
+    scanf("%f", &capDeger);
+
+    yaricap = capDeger / 2.0f;
+    tabanA = PI * yaricap * yaricap;
+    hacim = (tabanA * yuk) / 3.0;
+
+    printf("Girilen yükseklik: %.0f cm, çap: %.0f cm\n", yuk, capDeger);
+    printf("Koninin hacmi: %.2f cm^3\n", hacim);
+
+
+
+    // ==== 6.16 Harmonik Ortalama ====
+    printf("\n\n\nCOZUM 6.16:\n");
+    printf("----------\n");
+
+    int s1, s2;
+    printf("Harmonik ortalaması hesaplanacak iki sayıyı yazınız: ");
+    scanf("%d %d", &s1, &s2);
+
+    int payH = 2 * s1 * s2;
+    int paydaH = s1 + s2;
+    double hOrtalama = (double)payH / paydaH;
+
+    printf("----------------------------------------\n");
+    printf("    2 * %d * %d = %d\n\n", s1, s2, payH);
+    printf("Harmonik Ortalama = %d / %d = %.2f\n", payH, paydaH, hOrtalama);
+
+
+
+    // ==== 6.22 Su Faturası ====
+    printf("\n\n\nCOZUM 6.22:\n");
+    printf("----------\n");
+
+    int sayacBas, sayacSon;
+    const double M3_FIYAT = 0.912857;
+
+    printf("Sayacın başlangıç değerini yazınız: ");
+    scanf("%d", &sayacBas);
+
+    printf("Sayacın bitiş değerini giriniz: ");
+    scanf("%d", &sayacSon);
+
+    int tuk = sayacSon - sayacBas;
+
+    if (tuk < 0) {
+        printf("Hata: bitiş değeri başlangıçtan küçük olamaz.\n");
+        tuk = 0;
+    }
+
+    double ucret = tuk * M3_FIYAT;
+    double atik = ucret * 0.5;
+    double toplamF = ucret + atik;
+
+    printf("----------------------------\n");
+    printf("Kullanılan su miktarı       : %d m3\n", tuk);
+    printf("Su kullanım tutarı          : %.2f TL\n", ucret);
+    printf("Atıksu ücreti (%%50)         : %.2f TL\n", atik);
+    printf("Toplam ödenecek tutar       : %.2f TL\n", toplamF);
+
+
+
+    // ==== 6.27 Orta Nokta Hesabı ====
+    printf("\n\n\nCOZUM 6.27:\n");
+    printf("----------\n");
+
+    double ix1, iy1, ix2, iy2, ortx, orty;
+
+    printf("Birinci noktanın x1 ve y1 değerlerini giriniz: ");
+    scanf("%lf %lf", &ix1, &iy1);
+
+    printf("İkinci noktanın x2 ve y2 değerlerini yazınız: ");
+    scanf("%lf %lf", &ix2, &iy2);
+
+    ortx = (ix1 + ix2) / 2.0;
+    orty = (iy1 + iy2) / 2.0;
+
+    printf("----------------------------------------\n");
+    printf("x0 = (%.2f + %.2f) / 2 = %.2f\n", ix1, ix2, ortx);
+    printf("y0 = (%.2f + %.2f) / 2 = %.2f\n", iy1, iy2, orty);
+
+
+
+    // ==== 6.4 ASCII Çizim ====
+    printf("\n\n\nCOZUM 6.4:\n");
+    printf("----------\n");
+
+    printf("        .-\"-\", \n");
+    printf("       /_ _  \\\n");
+    printf("       \\@ @  /\n");
+    printf("       (_= _)\n");
+    printf("         `) (_ \n");
+    printf("         /((_`)_ ,\n");
+    printf("         \\__(/-\"\"\n");
+    printf("        __|||__\n");
+    printf("       ((__|__))\n");
+
+    return 0;
+}
