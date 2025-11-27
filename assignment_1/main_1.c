@@ -10,6 +10,10 @@ int main (){
     */
    printf("ibrahim sengun");
       printf("emine özge uygur");
+   printf("Efsun Ruzgar Bayik");
 
+   printf("Umay ERYİLMAZ");
+
+   printf("Sefa Sahin OZ");
     return 0;
 }
